@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+
+.login-contain{
+    margin: auto;
+    padding: 40px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    color: white;
+}
+
+
+#loginForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#loginForm input{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.151);
+    background-color: rgba(255, 255, 255, 0.151);
+
+}
+
+#loginForm button{
+    padding: 10px;
+    background-color: rgb(30, 2, 56);
+    color: white;
+    border: 1px solid  rgb(30, 2, 56) ;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#loginForm button:hover{
+    background-color: white;
+    border: 1px solid white;
+    color:  rgb(30, 2, 56);
+}
+
+#loginForm input::placeholder{
+    color: white;
+}
+
+

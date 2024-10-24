@@ -1,0 +1,262 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(247, 239, 230);
+    font-family: "Public Sans", sans-serif;
+}
+
+.sidebar{
+    width: 150px;
+    background-color:blueviolet;
+    height: 100vh;
+    color: white;
+    padding: 20px;
+    position:fixed;
+    top: 0;
+}
+
+.sidebar button{
+    margin-top: 200px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 800;
+}
+
+.sidebar button:hover{
+    background-color: white;
+    color: blueviolet;
+}
+
+.sidebar .nav{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 0;
+}
+
+.sidebar h1{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+.nav .links{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px
+}
+
+.nav .links:hover{
+    background-color: rgb(151, 73, 224);
+    border-radius: 20px;
+}
+
+.nav .active{
+    background-color: rgb(151, 73, 224);    border-radius: 20px;
+}
+
+.container {
+   position: relative;
+   left: 190px;
+   width: 80%;
+   display: flex;
+
+    min-height: 100vh;
+}
+
+.content{
+    width: 70%;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content > h4{
+    font-weight: 500;
+    color: grey;
+    border: 1px solid grey;
+    padding: 10px 20px;
+    font-size: 0.8em;
+    border-radius: 10px;
+}
+
+.question-container{
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.712);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list-header{
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: rgb(223, 221, 221);
+    display: grid;
+    grid-template-columns: 50% 16.7% 16.7% 16.7%;}
+
+    #add-btn{
+        margin-right: auto;
+        /* width: 150px; */
+        padding: 10px 20px;
+        background-color: blueviolet;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    #add-btn:hover{
+        background-color: rgb(166, 84, 243);
+    }
+
+.search-bar input{
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid blueviolet;
+}
+
+#queue{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+#queue > div > h3{
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+}
+#queue h4{
+    margin: 0;
+    padding: 0;
+}
+
+#queue > *{
+    display: flex;
+    flex-direction: column;
+}
+
+#queue > div > div{
+    border-radius: 10px;
+    padding: 10px 10px;
+    display: grid;
+    grid-template-columns: 50% 16.7% 16.7% 16.7%;
+    box-shadow: 0 2px 3px 0 rgba(128, 128, 128, 0.062);
+}
+
+#queue > div > div >*{
+    margin: auto 0;
+}
+
+#queue > div > div > h4{
+    font-weight: 400;
+}
+
+#queue p{
+    font-size: 0.7em;
+}
+
+.action{
+    display: flex;
+    gap: 5px;
+}
+
+
+
+
+button{
+    cursor: pointer;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+button:hover{
+    background-color: grey;
+    color: white;
+}
+.action .delete-btn{
+    background-color: red;
+    color: white;
+}
+
+#question-form{
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.712);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#question-form .row{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.row input, select{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#question-form .double{
+    flex-direction: row;
+    gap: 20px;
+}
+
+#question-form .double > *{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+#add-question-btn, #update-question-btn{
+    padding: 10px 20px;
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid blueviolet;
+
+}
+
+#cancel{
+    padding: 10px 20px;
+    background-color: orangered;
+    color: white;
+    border: 1px solid orangered;
+
+}
+
+#add-question-btn:hover, #update-question-btn:hover{
+    background-color: transparent;
+    color: blueviolet;
+    border: 1px solid blueviolet;
+}
+
+#cancel:hover{
+    background-color: transparent;
+    color: orangered;
+    border: 1px solid orangered;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
+

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Surveys</title>
+    <link rel="stylesheet" href="style-survey.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+      
+    <div id="page-container" style="display: none;">
+    <div class="sidebar">
+      <img src="./icon.png" style="width:50%;margin: auto; margin-bottom: 80px;    margin-left: 20px;" >
+      <div class="nav">
+        <a href="./index.html" class="links active">Surveys</a>
+        <a href="./questions.html" class="links">Questions</a>
+      </div>
+      
+      <button class="links" id="log-out">Log out</button>
+    </div>
+    <div class="container">
+      <div class="content">
+        <h4>Manage Surveys</h4>
+
+        <div class="head-buttons">
+          <button id="add-new-btn">Add Survey  +</button>
+          <a href="./index.html" id="go-back"> ←Go back </a>
+        </div>
+
+        <div id="survey-container">
+          <!-- Survey Tabs -->
+          <div class="tabs" id="tabs">
+            <button id="published-tab" class="active">Published</button>
+            <button id="drafts-tab" >Drafts</button>
+          </div>
+  
+          <!-- Survey List -->
+          <div id="survey-list"></div>
+  
+          <!-- List Questions -->
+          <div id="question-list" style="display: none">
+            <button id="newQuestion">Add new question  +</button>
+          </div>
+  
+          <!-- Add/Edit Survey Form -->
+          <div id="survey-form" style="display: none">
+            <h3 id="form-title">Add New Survey</h3>
+  
+            <div class="row" style="margin-bottom: 10px;">
+
+              <div class="title" style="width: 100%;">
+                <label for="survey-title">Survey Title:</label>
+                <input type="text" id="survey-title" style="width: 100%;" required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="image">
+                <label for="featured-image">Upload Featured Image:</label>
+                <input type="file" id="featured-image" accept="image/*" />
+              </div>
+              <div class="category">
+                <label for="category">Educative</label>
+                <select name="category" id="s-cat">
+                  <option value="educative">Educative</option>
+                  <option value="entertaining">Entertaining</option>
+                </select>
+              </div>
+            </div>
+  
+            <h5>Grading Criteria and Images:</h5>
+  
+            <div class="group">
+              <div class="row">
+                <div class="criteria">
+                  <label for="grading-criteria-1"
+                    >Grading for majority option A:</label
+                  >
+                  <input
+                    type="text"
+                    id="grading-criteria-1"
+                    placeholder="Enter result for majority A"
+                    required
+                  />
+                </div>
+                <div class="image">
+                  <label for="grading-image-1">Upload image for option A:</label>
+                  <input
+                    type="file"
+                    id="grading-image-1"
+                    accept="image/*"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="criteria">
+                  <label for="desc-1"
+                    >Description:</label
+                  >
+                  <input
+                    type="text"
+                    id="desc-1"
+                    placeholder="Enter description text for majority A"
+                    required
+                  />
+                </div>
+                <div class="link">
+                  <label for="link-1">Add link for option A:</label>
+                  <input
+                    type="url"
+                    id="link-1"
+                  
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="row">
+                <div class="criteria">
+                  <label for="grading-criteria-2"
+                    >Grading for majority option B:</label
+                  >
+                  <input
+                    type="text"
+                    id="grading-criteria-2"
+                    placeholder="Enter result for majority B"
+                    required
+                  />
+                </div>
+                <div class="image">
+                  <label for="grading-image-2">Upload image for option B:</label>
+                  <input
+                    type="file"
+                    id="grading-image-2"
+                    accept="image/*"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="criteria">
+                  <label for="desc-2"
+                    >Description:</label
+                  >
+                  <input
+                    type="text"
+                    id="desc-2"
+                    placeholder="Enter description text for majority B"
+                    required
+                  />
+                </div>
+                <div class="link">
+                  <label for="link">Add link for option B:</label>
+                  <input
+                    type="url"
+                    id="link-2"
+                  
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="row">
+                <div class="criteria">
+                  <label for="grading-criteria-3"
+                    >Grading for majority option C:</label
+                  >
+                  <input
+                    type="text"
+                    id="grading-criteria-3"
+                    placeholder="Enter result for majority C"
+                    required
+                  />
+                </div>
+                <div class="image">
+                  <label for="grading-image-1">Upload image for option C:</label>
+                  <input
+                    type="file"
+                    id="grading-image-3"
+                    accept="image/*"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="criteria">
+                  <label for="desc-C"
+                    >Description:</label
+                  >
+                  <input
+                    type="text"
+                    id="desc-3"
+                    placeholder="Enter description text for majority C"
+                    required
+                  />
+                </div>
+                <div class="link">
+                  <label for="link-3">Add link for option C:</label>
+                  <input
+                    type="url"
+                    id="link-3"
+                  
+                    required
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="row">
+                <div class="criteria">
+                  <label for="grading-criteria-4"
+                    >Grading for majority option D:</label
+                  >
+                  <input
+                    type="text"
+                    id="grading-criteria-4"
+                    placeholder="Enter result for majority D"
+                    required
+                  />
+                </div>
+                <div class="image">
+                  <label for="grading-image-4">Upload image for option D:</label>
+                  <input
+                    type="file"
+                    id="grading-image-4"
+                    accept="image/*"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="criteria-4">
+                  <label for="desc-4"
+                    >Description:</label
+                  >
+                  <input
+                    type="text"
+                    id="desc-4"
+                    placeholder="Enter description text for majority D"
+                    required
+                  />
+                </div>
+                <div class="link">
+                  <label for="link-4">Add link for option D:</label>
+                  <input
+                    type="url"
+                    id="link-4"
+                  
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+  
+            <div class="group">
+              <div class="row">
+                <div class="criteria">
+                  <label for="grading-criteria-5"
+                    >Grading for majority option E:</label
+                  >
+                  <input
+                    type="text"
+                    id="grading-criteria-5"
+                    placeholder="Enter result for majority E"
+                    required
+                  />
+                </div>
+                <div class="image">
+                  <label for="grading-image-5">Upload image for option E:</label>
+                  <input
+                    type="file"
+                    id="grading-image-5"
+                    accept="image/*"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="criteria">
+                  <label for="desc-5"
+                    >Description:</label
+                  >
+                  <input
+                    type="text"
+                    id="desc-5"
+                    placeholder="Enter description text for majority E"
+                    required
+                  />
+                </div>
+                <div class="link">
+                  <label for="link-5">Add link for option E:</label>
+                  <input
+                    type="url"
+                    id="link-5"
+                  
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button id="add-survey-btn">Add Survey</button>
+              <button id="update-survey-btn" style="display: none">
+                Update Survey
+              </button>
+              <button id="close-survey-form">Cancel</button>
+            </div>
+          </div>
+  
+          <!-- Add/Edit Question Form -->
+          <div id="question-form" style="display: none">
+            <h3 id="form-title">Add New Question</h3>
+  
+            <!-- Question Text Input -->
+  
+            <div class="row">
+              <label for="question-text">Question Text:</label>
+              <input
+                type="text"
+                id="question-text"
+                placeholder="Enter Question"
+                required
+              />
+            </div>
+  
+            <div class="row double">
+              <!-- Question Type Input -->
+              <div class="type">
+                <label for="question-type">Question Type:</label>
+                <input type="text" id="question-type" />
+              </div>
+  
+              <div class="image">
+                <!-- Image Upload Input -->
+                <label for="question-image">Upload Image:</label>
+                <input type="file" id="question-image" accept="image/*" />
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="options">
+                <!-- Question Options Input -->
+                <label for="optionsa">Option A:</label>
+                <input type="text" id="optionsa" />
+                <label for="optionsb">Option B:</label>
+                <input type="text" id="optionsb" />
+                <label for="optionsc">Option C:</label>
+                <input type="text" id="optionsc" />
+                <label for="optionsd">Option D:</label>
+                <input type="text" id="optionsd" />
+                <label for="optionsE">Option E:</label>
+                <input type="text" id="optionse" />
+              </div>
+            </div>
+  
+            <!-- Add/Update Buttons -->
+            <div class="buttons">
+              <button id="add-question-btn">Add Question</button>
+              <!-- <button id="update-question-btn" style="display: none">
+                Update Question
+              </button> -->
+  
+              <button id="cancel">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"
+      type="module"
+    ></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js"
+      type="module"
+    ></script>
+    <script type="module" src="survey-script.js"></script>
+  </body>
+</html>

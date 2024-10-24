@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Questions</title>
+    <link rel="stylesheet" href="style-new.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="page-container" style="display: none;">
+    <div class="sidebar">
+                 <img src="./icon.png" style="width:50%;margin: auto; margin-bottom: 80px;    margin-left: 20px;" >
+      <div class="nav">
+        <a href="./index.html" class="links">Surveys</a>
+        <a href="./questions.html" class="links active">Questions</a>
+         <button class="links" id="log-out">Log out</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content">
+        <h4>Manage Questions</h4>
+
+        <button id="add-btn">Add New Question   +</button>
+
+        <!-- Questions List (Organized by Surveys) -->
+        <div class="question-container" id="question-view">
+          <!-- Search Bar for Filtering Questions -->
+          <div class="search-bar">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search for a question..."
+            />
+          </div>
+          <div class="list-header">
+            <h5>Question</h5>
+            <h5>Survey</h5>
+            <h5>Type</h5>
+
+            <h5>Actions</h5>
+          </div>
+          <div id="queue"></div>
+        </div>
+
+        <!-- Add/Edit Question Form -->
+        <div id="question-form" style="display: none">
+          <h3 id="form-title">Add New Question</h3>
+
+          <!-- Question Text Input -->
+
+          <div class="row">
+            <label for="question-text">Question Text:</label>
+            <input
+              type="text"
+              id="question-text"
+              placeholder="Enter Question"
+              required
+            />
+          </div>
+
+          <div class="row double">
+            <!-- Survey Selection -->
+            <div class="survey">
+              <label for="survey-select">Select Survey:</label>
+              <select id="survey-select"></select>
+            </div>
+            <!-- Question Type Input -->
+            <div class="type">
+              <label for="question-type">Question Type:</label>
+              <input type="text" id="question-type" />
+            </div>
+
+            <div class="image">
+              <!-- Image Upload Input -->
+              <label for="question-image">Upload Image:</label>
+              <input type="file" id="question-image" accept="image/*" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="options">
+              <!-- Question Options Input -->
+              <label for="optionsa">Option A:</label>
+              <input type="text" id="optionsa" />
+              <label for="optionsb">Option B:</label>
+              <input type="text" id="optionsb" />
+              <label for="optionsc">Option C:</label>
+              <input type="text" id="optionsc" />
+              <label for="optionsd">Option D:</label>
+              <input type="text" id="optionsd" />
+              <label for="optionsE">Option E:</label>
+              <input type="text" id="optionse" />
+            </div>
+          </div>
+
+          <!-- Add/Update Buttons -->
+          <div class="buttons">
+            <button id="add-question-btn">Add Question</button>
+            <button id="update-question-btn" style="display: none">
+              Update Question
+            </button>
+
+            <button id="cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Firebase and Custom JS Script Imports -->
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"
+    ></script>
+    <script type="module" src="question.js"></script>
+  </body>
+</html>
